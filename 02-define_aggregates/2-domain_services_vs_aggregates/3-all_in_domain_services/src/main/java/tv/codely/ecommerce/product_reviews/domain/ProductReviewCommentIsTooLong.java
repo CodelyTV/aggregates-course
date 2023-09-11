@@ -2,6 +2,6 @@ package tv.codely.ecommerce.product_reviews.domain;
 
 public class ProductReviewCommentIsTooLong extends RuntimeException {
     public ProductReviewCommentIsTooLong(String comment) {
-        super("The review comment <" + comment + "> is too long. Max 500 chars");
+        super("The review comment <" + comment + "> is too long. Max 600 chars");
     }
 }

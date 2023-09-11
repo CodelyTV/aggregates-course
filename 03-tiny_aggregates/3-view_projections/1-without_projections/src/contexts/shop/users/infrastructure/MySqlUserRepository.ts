@@ -1,4 +1,4 @@
-import { MariaDBConnection } from "../../shared/infrastructure/MariaDBConnection";
+import { MariaDBConnection } from "../../../shared/infrastructure/MariaDBConnection";
 import { User } from "../domain/User";
 import { UserId } from "../domain/UserId";
 import { UserRepository } from "../domain/UserRepository";
@@ -6,6 +6,7 @@ import { UserRepository } from "../domain/UserRepository";
 type DatabaseUser = {
 	id: string;
 	name: string;
+	profile_picture: string;
 };
 
 export class MySqlUserRepository implements UserRepository {
@@ -13,17 +14,18 @@ export class MySqlUserRepository implements UserRepository {
 
 	async save(product: User): Promise<void> {
 		const query = `
-			INSERT INTO users (id, name)
+			INSERT INTO shop__users (id, name, profile_picture)
 			VALUES (
 				'${product.id.value}',
-				'${product.name.value}'
+				'${product.name.value}',
+				'${product.profilePicture.value}'
 			);`;
 
 		await this.connection.execute(query);
 	}
 
 	async search(id: UserId): Promise<User | null> {
-		const query = `SELECT id, name FROM users WHERE id = '${id.value}';`;
+		const query = `SELECT id, name, profile_picture FROM shop__users WHERE id = '${id.value}';`;
 
 		const result = await this.connection.searchOne<DatabaseUser>(query);
 
@@ -31,6 +33,6 @@ export class MySqlUserRepository implements UserRepository {
 			return null;
 		}
 
-		return new User(result.id, result.name);
+		return new User(result.id, result.name, result.profile_picture);
 	}
 }

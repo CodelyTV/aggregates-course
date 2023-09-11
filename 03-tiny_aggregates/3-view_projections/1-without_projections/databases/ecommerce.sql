@@ -18,5 +18,5 @@ CREATE TABLE shop__product_reviews (
     product_id  UUID REFERENCES shop__products(id),
     rating      FLOAT,
     comment     VARCHAR(500),
-    is_featured BOOLEAN
+    is_featured BOOLEAN DEFAULT FALSE
 );

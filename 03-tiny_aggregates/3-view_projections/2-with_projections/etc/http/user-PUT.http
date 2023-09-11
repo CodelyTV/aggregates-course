@@ -1,0 +1,7 @@
+PUT http://localhost:3000/api/users/{{$random.uuid}}
+Content-Type: application/json
+
+{
+  "name": "Javier Ferrer",
+  "profilePicture": "https://"
+}

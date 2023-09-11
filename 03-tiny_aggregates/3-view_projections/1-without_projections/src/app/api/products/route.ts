@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 
-import { AllProductsSearcher } from "../../../modules/products/application/search_all/AllProductsSearcher";
-import { ProductPrimitives } from "../../../modules/products/domain/Product";
-import { MySqlProductRepository } from "../../../modules/products/infrastructure/MySqlProductRepository";
-import { MariaDBConnection } from "../../../modules/shared/infrastructure/MariaDBConnection";
+import { MariaDBConnection } from "../../../contexts/shared/infrastructure/MariaDBConnection";
+import { AllProductsSearcher } from "../../../contexts/shop/products/application/search_all/AllProductsSearcher";
+import { ProductPrimitives } from "../../../contexts/shop/products/domain/Product";
+import { MySqlProductRepository } from "../../../contexts/shop/products/infrastructure/MySqlProductRepository";
 
 export async function GET(): Promise<NextResponse<ProductPrimitives[]> | Response> {
 	const searcher = new AllProductsSearcher(new MySqlProductRepository(new MariaDBConnection()));

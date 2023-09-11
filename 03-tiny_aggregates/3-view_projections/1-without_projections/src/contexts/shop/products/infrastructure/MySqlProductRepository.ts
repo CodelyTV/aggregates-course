@@ -33,18 +33,19 @@ export class MySqlProductRepository implements ProductRepository {
 
 	async search(id: ProductId): Promise<Product | null> {
 		const query = `
-    SELECT 
-      p.id,
-      p.name,
-      p.price_amount as amount,
-      p.price_currency as currency,
-      p.image_urls as imageUrls,
-      r.rating,
-      JSON_OBJECT('user_id', r.user_id, 'rating', r.rating, 'comment', r.comment, 'is_featured', r.is_featured) as featuredReview
-    FROM shop__products p
-    LEFT JOIN shop__product_reviews r ON p.id = r.product_id AND r.is_featured = true
-    WHERE p.id='${id.value}'
-    GROUP BY p.id
+	SELECT
+		p.id,
+		p.name,
+		p.price_amount as amount,
+		p.price_currency as currency,
+		p.image_urls as imageUrls,
+		AVG(r.rating) as rating,
+		JSON_OBJECT('user_id', fr.user_id, 'rating', fr.rating, 'comment', fr.comment, 'is_featured', fr.is_featured) as featuredReview
+	FROM shop__products p
+			 LEFT JOIN shop__product_reviews r ON p.id = r.product_id
+			 LEFT JOIN shop__product_reviews fr ON p.id = fr.product_id AND fr.is_featured = true
+	WHERE p.id='${id.value}'
+	GROUP BY p.id
   `;
 
 		const result = await this.connection.searchOne<DatabaseProduct>(query);

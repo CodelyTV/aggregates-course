@@ -11,9 +11,6 @@ public class ProductReview {
     private final ProductReviewComment comment;
 
     public ProductReview(String id, String productId, String userId, Integer rating, String comment) {
-        ensureRatingIsValid(rating);
-        ensureCommentIsValid(comment);
-
         this.id = new ProductReviewId(id);
         this.productId = new ProductId(productId);
         this.userId = new UserId(userId);
@@ -27,17 +24,5 @@ public class ProductReview {
         // review.record(new ProductReviewCreatedDomainEvent(id, userId, rating, comment));
 
         return review;
-    }
-
-    private void ensureCommentIsValid(String comment) {
-        if (comment.length() > 500) {
-            throw new ProductReviewCommentIsTooLong(comment);
-        }
-    }
-
-    private void ensureRatingIsValid(Integer rating) {
-        if (rating < 0 || rating > 5) {
-            throw new ProductReviewRatingNotValid(rating);
-        }
     }
 }

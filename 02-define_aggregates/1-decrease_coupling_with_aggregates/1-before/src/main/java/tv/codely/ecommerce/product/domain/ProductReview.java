@@ -17,6 +17,14 @@ public class ProductReview {
         this.comment = new ProductReviewComment(comment);
     }
 
+    public static ProductReview create(String id, String userId, Integer rating, String comment) {
+        var review = new ProductReview(id, userId, rating, comment);
+
+        // review.record(new ProductReviewCreatedDomainEvent(id, userId, rating, comment));
+
+        return review;
+    }
+
     public static ProductReview fromPrimitives(Map<String, String> primitives) {
         return new ProductReview(
             primitives.get("id"),

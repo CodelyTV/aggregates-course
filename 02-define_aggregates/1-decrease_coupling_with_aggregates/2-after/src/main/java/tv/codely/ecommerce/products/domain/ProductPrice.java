@@ -1,4 +1,4 @@
-package tv.codely.ecommerce.product.domain;
+package tv.codely.ecommerce.products.domain;
 
 public record ProductPrice(String value) {
 }

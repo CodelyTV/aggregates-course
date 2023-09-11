@@ -1,4 +1,4 @@
-package tv.codely.ecommerce.product.domain;
+package tv.codely.ecommerce.products.domain;
 
 public class ProductNotExist extends RuntimeException {
     public ProductNotExist(ProductId id) {

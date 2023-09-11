@@ -18,6 +18,13 @@ public class Product {
     }
 
     public void addReview(String id, String userId, Integer rating, String comment) {
-        this.reviews.add(new ProductReview(id, userId, rating, comment));
+        this.reviews.add(ProductReview.create(id, userId, rating, comment));
     }
+
+//    public List<DomainEvent> pullDomainEvents() {
+//        return Stream.concat(
+//            this.domainEvents,
+//            this.reviews.map(review -> review.pullDomainEvents()).flatMap(Collection::stream)
+//        ).collect(Collectors.toList());
+//    }
 }

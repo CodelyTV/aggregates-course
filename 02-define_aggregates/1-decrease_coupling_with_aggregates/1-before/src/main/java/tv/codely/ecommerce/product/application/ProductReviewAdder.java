@@ -11,5 +11,6 @@ record ProductReviewAdder(ProductRepository repository) {
         product.addReview(id, userId, rating, comment);
 
         this.repository.save(product);
+        // this.eventBus.publish(product.pullDomainEvents());
     }
 }

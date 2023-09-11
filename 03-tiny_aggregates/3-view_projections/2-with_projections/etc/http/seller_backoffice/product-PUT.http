@@ -1,4 +1,4 @@
-PUT http://localhost:3000/api/products/{{$random.uuid}}
+PUT http://localhost:3000/api/seller_backoffice/products/{{$random.uuid}}
 Content-Type: application/json
 
 {
@@ -9,5 +9,6 @@ Content-Type: application/json
 	},
   "imageUrls": [
     "https://picsum.photos/200/300"
-  ]
+  ],
+  "creationDate": 1694472992
 }

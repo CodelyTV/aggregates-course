@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 
-import { MariaDBConnection } from "../../../contexts/shared/infrastructure/MariaDBConnection";
-import { ProductReviewsByProductSearcher } from "../../../contexts/shop/product_reviews/application/search_by_product_id/ProductReviewsByProductSearcher";
-import { MySqlProductReviewRepository } from "../../../contexts/shop/product_reviews/infrastructure/MySqlProductReviewRepository";
-import { ProductPrimitives } from "../../../contexts/shop/products/domain/Product";
+import { MariaDBConnection } from "../../../../contexts/shared/infrastructure/MariaDBConnection";
+import { ProductReviewsByProductSearcher } from "../../../../contexts/shop/product_reviews/application/search_by_product_id/ProductReviewsByProductSearcher";
+import { MySqlProductReviewRepository } from "../../../../contexts/shop/product_reviews/infrastructure/MySqlProductReviewRepository";
+import { ProductPrimitives } from "../../../../contexts/shop/products/domain/Product";
 
 export async function GET(
 	request: NextRequest,

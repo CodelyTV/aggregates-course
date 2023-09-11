@@ -1,4 +1,4 @@
-PUT http://localhost:3000/api/users/{{$random.uuid}}
+PUT http://localhost:3000/api/shop/users/{{$random.uuid}}
 Content-Type: application/json
 
 {

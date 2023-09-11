@@ -3,12 +3,12 @@ import * as t from "io-ts";
 import { PathReporter } from "io-ts/PathReporter";
 import { NextRequest, NextResponse } from "next/server";
 
-import { Money } from "../../../../contexts/shared/domain/Money";
-import { MariaDBConnection } from "../../../../contexts/shared/infrastructure/MariaDBConnection";
-import { ProductCreator } from "../../../../contexts/shop/products/application/create/ProductCreator";
-import { ProductSearcher } from "../../../../contexts/shop/products/application/search/ProductSearcher";
-import { ProductPrimitives } from "../../../../contexts/shop/products/domain/Product";
-import { MySqlProductRepository } from "../../../../contexts/shop/products/infrastructure/MySqlProductRepository";
+import { ProductCreator } from "../../../../../contexts/seller_backoffice/products/application/create/ProductCreator";
+import { ProductSearcher } from "../../../../../contexts/seller_backoffice/products/application/search/ProductSearcher";
+import { ProductPrimitives } from "../../../../../contexts/seller_backoffice/products/domain/Product";
+import { MySqlProductRepository } from "../../../../../contexts/seller_backoffice/products/infrastructure/MySqlProductRepository";
+import { Money } from "../../../../../contexts/shared/domain/Money";
+import { MariaDBConnection } from "../../../../../contexts/shared/infrastructure/MariaDBConnection";
 
 const CreateProductRequest = t.type({
 	name: t.string,
@@ -17,6 +17,7 @@ const CreateProductRequest = t.type({
 		currency: t.union([t.literal("EUR"), t.literal("USD")]),
 	}),
 	imageUrls: t.array(t.string),
+	creationDate: t.number,
 });
 
 export async function PUT(
@@ -38,6 +39,7 @@ export async function PUT(
 		body.name,
 		body.price as Money,
 		body.imageUrls,
+		new Date(body.creationDate * 1000),
 	);
 
 	return new Response("", { status: 201 });

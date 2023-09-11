@@ -1,0 +1,42 @@
+PUT http://localhost:3000/api/products/{{$random.uuid}}
+Content-Type: application/json
+
+{
+  "name": "Very good product 2",
+  "price": {
+        "amount": 12,
+        "currency": "EUR"
+	},
+  "imageUrls": [
+    "https://picsum.photos/200/300"
+  ],
+  "videoUrls": [
+    "https://picsum.photos/200/300"
+  ],
+  "categories": [
+    {
+      "id": "123e4567-e89b-12d3-a456-426614174000",
+      "name": "Libros"
+    }
+  ],
+  "sellers": [
+    {
+      "id": "a36947dc-4029-40dd-b670-33a5379859e2",
+      "name": "TechStore"
+    }
+  ],
+  "tags": [
+    {
+      "id": "cac2273c-5e15-4c81-b8a7-f17eaae3118a",
+      "name": "Nuevo"
+    },
+    {
+      "id": "cbfcb9ab-5f85-4818-9a56-803d05e6e289",
+      "name": "Popular"
+    },
+    {
+      "id": "3c7bd932-53aa-4f48-8724-2dab1ad5aedb",
+      "name": "Codely"
+    }
+  ]
+}

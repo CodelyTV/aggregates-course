@@ -19,10 +19,6 @@ public class ProductReview {
     }
 
     public static ProductReview create(String id, String productId, String userId, Integer rating, String comment) {
-        var review = new ProductReview(id, productId, userId, rating, comment);
-
-        // review.record(new ProductReviewCreatedDomainEvent(id, userId, rating, comment));
-
-        return review;
+        return new ProductReview(id, productId, userId, rating, comment);
     }
 }

@@ -11,7 +11,6 @@ record ProductReviewAdder(ProductReviewRepository repository, ProductFinder find
         var review = ProductReview.create(id, productId, userId, rating, comment);
 
         this.repository.save(review);
-        // this.eventBus.publish(review.pullDomainEvents());
     }
 
     private void ensureProductExist(String productId) {

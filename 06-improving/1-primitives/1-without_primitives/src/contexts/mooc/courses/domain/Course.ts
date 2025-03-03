@@ -12,8 +12,6 @@ import { CourseResummarizedDomainEvent } from "./CourseResummarizedDomainEvent";
 import { CourseSummary } from "./CourseSummary";
 
 export class Course extends AggregateRoot {
-	static aggregateName = "codely.mooc.courses";
-
 	private readonly id: CourseId;
 	private name: CourseName;
 	private summary: CourseSummary;

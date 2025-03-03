@@ -1,3 +1,5 @@
+import { Primitives } from "@codelytv/primitives-type";
+
 import { CourseCategory } from "./CourseCategory";
 
 export class CourseCategories {
@@ -32,5 +34,11 @@ export class CourseCategories {
 
 	value(): string[] {
 		return this.categories.map((category) => category.value);
+	}
+
+	toPrimitives(): Primitives<CourseCategories> {
+		return {
+			categories: this.value(),
+		};
 	}
 }

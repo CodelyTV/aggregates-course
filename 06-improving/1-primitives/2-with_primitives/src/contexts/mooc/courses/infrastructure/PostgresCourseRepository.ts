@@ -19,14 +19,16 @@ export class PostgresCourseRepository
 	implements CourseRepository
 {
 	async save(course: Course): Promise<void> {
+		const userPrimitives = course.toPrimitives();
+
 		await this.execute`
 			INSERT INTO mooc.courses (id, name, summary, categories)
 			VALUES (
-					   ${course.idValue()},
-					   ${course.nameValue()},
-					   ${course.summaryValue()},
-					   ${course.categoriesValue()}
-				   )
+				${userPrimitives.id},
+				${userPrimitives.name},
+				${userPrimitives.summary},
+				${userPrimitives.categories}
+			)
 			ON CONFLICT (id) DO UPDATE SET
 				name = EXCLUDED.name,
 				summary = EXCLUDED.summary,
@@ -57,6 +59,11 @@ export class PostgresCourseRepository
 	}
 
 	protected toAggregate(row: DatabaseCourseRow): Course {
-		return new Course(row.id, row.name, row.summary, row.categories);
+		return Course.fromPrimitives({
+			id: row.id,
+			name: row.name,
+			summary: row.summary,
+			categories: row.categories,
+		});
 	}
 }

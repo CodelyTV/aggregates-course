@@ -1,6 +1,8 @@
+import { Primitives } from "@codelytv/primitives-type";
+
 import { AggregateRoot } from "../../../shared/domain/AggregateRoot";
 
-import { CourseCategories } from "./CourseCategories";
+import { CourseCategory } from "./CourseCategory";
 import { CourseCategoryAddedDomainEvent } from "./CourseCategoryAddedDomainEvent";
 import { CourseCategoryRemovedDomainEvent } from "./CourseCategoryRemovedDomainEvent";
 import { CourseCreatedDomainEvent } from "./CourseCreatedDomainEvent";
@@ -12,25 +14,24 @@ import { CourseResummarizedDomainEvent } from "./CourseResummarizedDomainEvent";
 import { CourseSummary } from "./CourseSummary";
 
 export class Course extends AggregateRoot {
-	static aggregateName = "codely.mooc.courses";
-
-	private readonly id: CourseId;
-	private name: CourseName;
-	private summary: CourseSummary;
-	private categories: CourseCategories;
-
 	constructor(
-		id: string,
-		name: string,
-		summary: string,
-		categories: string[],
+		public readonly id: CourseId,
+		public name: CourseName,
+		public summary: CourseSummary,
+		public categories: CourseCategory[],
 	) {
 		super();
+	}
 
-		this.id = new CourseId(id);
-		this.name = new CourseName(name);
-		this.summary = new CourseSummary(summary);
-		this.categories = CourseCategories.create(categories);
+	static fromPrimitives(primitives: Primitives<Course>): Course {
+		return new Course(
+			new CourseId(primitives.id),
+			new CourseName(primitives.name),
+			new CourseSummary(primitives.summary),
+			primitives.categories.map(
+				(category) => new CourseCategory(category),
+			),
+		);
 	}
 
 	static create(
@@ -39,7 +40,12 @@ export class Course extends AggregateRoot {
 		summary: string,
 		categories: string[],
 	): Course {
-		const course = new Course(id, name, summary, categories);
+		const course = new Course(
+			new CourseId(id),
+			new CourseName(name),
+			new CourseSummary(summary),
+			categories.map((category) => new CourseCategory(category)),
+		);
 
 		course.record(
 			new CourseCreatedDomainEvent(id, name, summary, categories),
@@ -63,12 +69,12 @@ export class Course extends AggregateRoot {
 	}
 
 	hasCategory(category: string): boolean {
-		return this.categories.includes(category);
+		return this.categories.includes(new CourseCategory(category));
 	}
 
 	addCategory(category: string): void {
 		if (!this.hasCategory(category)) {
-			this.categories = this.categories.push(category);
+			this.categories.push(new CourseCategory(category));
 
 			this.record(
 				new CourseCategoryAddedDomainEvent(this.id.value, category),
@@ -77,8 +83,10 @@ export class Course extends AggregateRoot {
 	}
 
 	removeCategory(category: string): void {
-		if (this.hasCategory(category)) {
-			this.categories = this.categories.remove(category);
+		const index = this.categories.indexOf(new CourseCategory(category));
+
+		if (index !== -1) {
+			this.categories.splice(index, 1);
 
 			this.record(
 				new CourseCategoryRemovedDomainEvent(this.id.value, category),
@@ -90,19 +98,12 @@ export class Course extends AggregateRoot {
 		this.record(new CourseDeletedDomainEvent(this.id.value));
 	}
 
-	idValue(): string {
-		return this.id.value;
-	}
-
-	nameValue(): string {
-		return this.name.value;
-	}
-
-	summaryValue(): string {
-		return this.summary.value;
-	}
-
-	categoriesValue(): string[] {
-		return this.categories.value();
+	toPrimitives(): Primitives<Course> {
+		return {
+			id: this.id.value,
+			name: this.name.value,
+			summary: this.summary.value,
+			categories: this.categories.map((category) => category.value),
+		};
 	}
 }

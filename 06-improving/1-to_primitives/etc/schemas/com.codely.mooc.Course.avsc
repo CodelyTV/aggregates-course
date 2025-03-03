@@ -1,0 +1,65 @@
+{
+	"type": "record",
+	"name": "Course",
+	"namespace": "com.codely.mooc",
+	"fields": [
+		{
+			"name": "aggregateId",
+			"type": "string"
+		},
+		{
+			"name": "aggregateName",
+			"type": "string"
+		},
+		{
+			"name": "id",
+			"type": {
+				"type": "string",
+				"minLength": 4,
+				"maxLength": 4
+			}
+		},
+		{
+			"name": "name",
+			"type": {
+				"type": "string",
+				"maxLength": 255,
+				"minLength": 1
+			}
+		},
+		{
+			"name": "summary",
+			"type": {
+				"type": "string",
+				"maxLength": 255,
+				"minLength": 1
+			}
+		},
+		{
+			"name": "description",
+			"type": {
+				"type": "string",
+				"maxLength": 255,
+				"minLength": 1
+			},
+			"default": "Proximamente"
+		},
+		{
+			"name": "categories",
+			"type": {
+				"type": "array",
+				"items": {
+					"type": "string",
+					"minLength": 1
+				}
+			}
+		},
+		{
+			"name": "publishedAt",
+			"type": {
+				"type": "long",
+				"logicalType": "timestamp-millis"
+			}
+		}
+	]
+}

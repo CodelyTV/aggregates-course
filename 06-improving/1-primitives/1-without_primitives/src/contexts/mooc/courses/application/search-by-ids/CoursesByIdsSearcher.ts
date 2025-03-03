@@ -1,6 +1,5 @@
 import { Service } from "diod";
 
-import { CourseId } from "../../domain/CourseId";
 import { CourseRepository } from "../../domain/CourseRepository";
 import { CourseResponse } from "../../domain/CourseResponse";
 
@@ -9,9 +8,7 @@ export class CoursesByIdsSearcher {
 	constructor(private readonly repository: CourseRepository) {}
 
 	async search(ids: string[]): Promise<CourseResponse[]> {
-		const courses = await this.repository.searchByIds(
-			ids.map((id) => new CourseId(id)),
-		);
+		const courses = await this.repository.searchByIds(ids);
 
 		return courses.map(
 			(course) =>

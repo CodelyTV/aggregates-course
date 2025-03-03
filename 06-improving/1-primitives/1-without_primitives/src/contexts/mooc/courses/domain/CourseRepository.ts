@@ -6,7 +6,7 @@ export abstract class CourseRepository {
 
 	abstract search(id: CourseId): Promise<Course | null>;
 
-	abstract searchByIds(ids: CourseId[]): Promise<Course[]>;
+	abstract searchByIds(ids: string[]): Promise<Course[]>;
 
 	abstract delete(id: CourseId): Promise<void>;
 }

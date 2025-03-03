@@ -5,7 +5,7 @@ import { Kafka } from "kafkajs";
 import { CourseCreator } from "../../../mooc/courses/application/create/CourseCreator";
 import { CourseDeleter } from "../../../mooc/courses/application/delete/CourseDeleter";
 import { CourseRenamer } from "../../../mooc/courses/application/rename/CourseRenamer";
-import { CoursesByIdsSearcher } from "../../../mooc/courses/application/search-by-ids/CoursesByIdsSearcher";
+import { CourseSearcher } from "../../../mooc/courses/application/search/CourseSearcher";
 import { CourseRepository } from "../../../mooc/courses/domain/CourseRepository";
 import { DomainCourseFinder } from "../../../mooc/courses/domain/DomainCourseFinder";
 import { PostgresCourseRepository } from "../../../mooc/courses/infrastructure/PostgresCourseRepository";
@@ -50,7 +50,7 @@ builder.register(CourseRepository).use(PostgresCourseRepository);
 builder.registerAndUse(PostgresCourseRepository);
 
 builder.registerAndUse(DomainCourseFinder);
-builder.registerAndUse(CoursesByIdsSearcher);
+builder.registerAndUse(CourseSearcher);
 builder.registerAndUse(CourseRenamer);
 builder.registerAndUse(CourseCreator);
 builder.registerAndUse(CourseDeleter);

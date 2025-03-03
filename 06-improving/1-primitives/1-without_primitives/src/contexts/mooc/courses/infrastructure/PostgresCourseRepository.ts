@@ -42,13 +42,11 @@ export class PostgresCourseRepository
 		`;
 	}
 
-	async searchByIds(ids: CourseId[]): Promise<Course[]> {
-		const plainIds = ids.map((id) => id.value);
-
+	async searchByIds(ids: string[]): Promise<Course[]> {
 		return await this.searchMany`
 			SELECT id, name, summary, categories
 			FROM mooc.courses
-			WHERE id = ANY(${plainIds}::text[]);
+			WHERE id = ANY(${ids}::text[]);
 		`;
 	}
 

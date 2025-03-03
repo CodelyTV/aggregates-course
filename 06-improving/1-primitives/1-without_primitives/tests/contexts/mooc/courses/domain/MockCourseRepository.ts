@@ -25,7 +25,7 @@ export class MockCourseRepository implements CourseRepository {
 		return this.mockSearch() as Promise<Course | null>;
 	}
 
-	async searchByIds(ids: CourseId[]): Promise<Course[]> {
+	async searchByIds(ids: string[]): Promise<Course[]> {
 		expect(this.mockSearchByIds).toHaveBeenCalledWith(ids);
 
 		return this.mockSearchByIds() as Promise<Course[]>;

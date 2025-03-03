@@ -19,7 +19,7 @@ export class User extends AggregateRoot {
 		public readonly profilePicture: UserProfilePicture,
 		public status: UserStatus,
 	) {
-		super(User.aggregateName, id.value);
+		super();
 	}
 
 	static create(

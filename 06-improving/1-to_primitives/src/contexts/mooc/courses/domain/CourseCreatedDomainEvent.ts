@@ -10,7 +10,6 @@ export class CourseCreatedDomainEvent extends CourseDomainEvent {
 		public readonly name: string,
 		public readonly summary: string,
 		public readonly categories: string[],
-		public readonly publishedAt: Date,
 		eventId?: string,
 		occurredOn?: Date,
 	) {
@@ -28,7 +27,6 @@ export class CourseCreatedDomainEvent extends CourseDomainEvent {
 			attributes.name as string,
 			attributes.summary as string,
 			attributes.categories as string[],
-			attributes.publishedAt as Date,
 			eventId,
 			occurredOn,
 		);
@@ -40,7 +38,6 @@ export class CourseCreatedDomainEvent extends CourseDomainEvent {
 			name: this.name,
 			summary: this.summary,
 			categories: this.categories,
-			publishedAt: this.publishedAt,
 		};
 	}
 }

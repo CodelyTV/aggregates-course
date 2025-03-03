@@ -19,7 +19,13 @@ export class CourseCreator {
 		summary: string,
 		categories: string[],
 	): Promise<void> {
-		const course = Course.create(this.clock, id, name, summary, categories);
+		const course = Course.create(
+			id,
+			name,
+			summary,
+			categories,
+			this.clock.now(),
+		);
 
 		await this.repository.save(course);
 		await this.eventBus.publish(course.pullDomainEvents());

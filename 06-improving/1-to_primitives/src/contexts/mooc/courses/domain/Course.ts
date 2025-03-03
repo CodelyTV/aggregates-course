@@ -1,91 +1,61 @@
-import { Primitives } from "@codelytv/primitives-type";
-
 import { AggregateRoot } from "../../../shared/domain/AggregateRoot";
-import { Clock } from "../../../shared/domain/Clock";
 
+import { CourseCategories } from "./CourseCategories";
 import { CourseCategoryAddedDomainEvent } from "./CourseCategoryAddedDomainEvent";
 import { CourseCategoryRemovedDomainEvent } from "./CourseCategoryRemovedDomainEvent";
 import { CourseCreatedDomainEvent } from "./CourseCreatedDomainEvent";
 import { CourseDeletedDomainEvent } from "./CourseDeletedDomainEvent";
 import { CourseId } from "./CourseId";
+import { CourseName } from "./CourseName";
 import { CourseRenamedDomainEvent } from "./CourseRenamedDomainEvent";
 import { CourseResummarizedDomainEvent } from "./CourseResummarizedDomainEvent";
+import { CourseSummary } from "./CourseSummary";
 
 export class Course extends AggregateRoot {
 	static aggregateName = "codely.mooc.courses";
 
-	constructor(
-		readonly id: CourseId,
-		public name: string,
-		public summary: string,
-		public categories: string[],
-		readonly publishedAt: Date,
-	) {
-		super(Course.aggregateName, id.value);
-	}
+	private readonly id: CourseId;
+	private name: CourseName;
+	private summary: CourseSummary;
+	private categories: CourseCategories;
 
-	static fromPrimitives(primitives: Primitives<Course>): Course {
-		return new Course(
-			new CourseId(primitives.id),
-			primitives.name,
-			primitives.summary,
-			primitives.categories,
-			new Date(primitives.publishedAt),
-		);
+	constructor(
+		id: string,
+		name: string,
+		summary: string,
+		categories: string[],
+	) {
+		super();
+
+		this.id = new CourseId(id);
+		this.name = new CourseName(name);
+		this.summary = new CourseSummary(summary);
+		this.categories = CourseCategories.create(categories);
 	}
 
 	static create(
-		clock: Clock,
 		id: string,
 		name: string,
 		summary: string,
 		categories: string[],
 	): Course {
-		const publishedAt = clock.now();
-
-		const course = Course.fromPrimitives({
-			aggregateId: id,
-			aggregateName: Course.aggregateName,
-			id,
-			name,
-			summary,
-			categories,
-			publishedAt: publishedAt.getTime(),
-		});
+		const course = new Course(id, name, summary, categories);
 
 		course.record(
-			new CourseCreatedDomainEvent(
-				id,
-				name,
-				summary,
-				categories,
-				publishedAt,
-			),
+			new CourseCreatedDomainEvent(id, name, summary, categories),
 		);
 
 		return course;
 	}
 
-	toPrimitives(): Primitives<Course> {
-		return {
-			aggregateId: this.aggregateId,
-			aggregateName: this.aggregateName,
-			id: this.id.value,
-			name: this.name,
-			summary: this.summary,
-			categories: this.categories,
-			publishedAt: this.publishedAt.getTime(),
-		};
-	}
-
 	rename(newName: string): void {
-		this.name = newName;
+		this.name = new CourseName(newName);
 
 		this.record(new CourseRenamedDomainEvent(this.id.value, newName));
 	}
 
 	resummarize(newSummary: string): void {
-		this.summary = newSummary;
+		this.summary = new CourseSummary(newSummary);
 
 		this.record(
 			new CourseResummarizedDomainEvent(this.id.value, newSummary),
@@ -98,7 +68,7 @@ export class Course extends AggregateRoot {
 
 	addCategory(category: string): void {
 		if (!this.hasCategory(category)) {
-			this.categories.push(category);
+			this.categories = this.categories.push(category);
 
 			this.record(
 				new CourseCategoryAddedDomainEvent(this.id.value, category),
@@ -107,10 +77,8 @@ export class Course extends AggregateRoot {
 	}
 
 	removeCategory(category: string): void {
-		const index = this.categories.indexOf(category);
-
-		if (index !== -1) {
-			this.categories.splice(index, 1);
+		if (this.hasCategory(category)) {
+			this.categories = this.categories.remove(category);
 
 			this.record(
 				new CourseCategoryRemovedDomainEvent(this.id.value, category),
@@ -120,5 +88,21 @@ export class Course extends AggregateRoot {
 
 	delete(): void {
 		this.record(new CourseDeletedDomainEvent(this.id.value));
+	}
+
+	idValue(): string {
+		return this.id.value;
+	}
+
+	nameValue(): string {
+		return this.name.value;
+	}
+
+	summaryValue(): string {
+		return this.summary.value;
+	}
+
+	categoriesValue(): string[] {
+		return this.categories.value();
 	}
 }

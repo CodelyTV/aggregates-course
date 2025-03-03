@@ -1,0 +1,125 @@
+### Register a new user
+PUT http://localhost:3000/api/mooc/users/e21f5fdf-b366-4287-bb58-556ac51be99f
+Content-Type: application/json
+
+{
+	"name": "Javier Ferrer",
+	"email": "javi@mail.com",
+	"profile_picture": "https://javi.jpg"
+}
+
+
+### Complete a course and get the user
+POST http://localhost:3000/api/mooc/course-progress
+Content-Type: application/json
+
+{
+	"courseId": "c4ch",
+	"userId": "e21f5fdf-b366-4287-bb58-556ac51be99f"
+}
+
+### Courses
+# cl3c: Clean Code
+# 3rr0: Modelado del Dominio: Excepciones vs Errores
+# tx4n: Diseño de Infraestructura: Transacciones
+# c4ch: Diseño de Infraestructura: Caché
+# viws: Diseño de Infraestructura: Vistas
+# iabp: Añade Inteligencia Artificial siguiendo buenas prácticas
+# 3j0r: Modelado del dominio: Proyecciones
+# 8l2o: Diseño de infraestructura: AWS SQS como cola de mensajería
+# t6oe: Patrones de Diseño: Criteria
+# 8r84: Diseño de infraestructura: RabbitMQ como cola de mensajería
+# 31ev: Diseño de infraestructura: Mapeo de herencia en PHP
+# oy5t: Next.js: Open Graph Images
+# s5j7: Problemas con DDD: Gestión de errores en Eventos de Domino
+# 57j6: Linting en PHP
+# kzg5: Modelado del Dominio: Eventos de Dominio
+# i36n: Análisis de código estático en PHP
+# 2505: Modelado del dominio: Agregados
+# wuzn: Buenas prácticas con CSS: Colores
+# p7en: TypeScript Avanzado: Mejora tu Developer eXperience
+# nsy6: Grafana
+# 0y7k: Modelado del dominio: Repositorios
+# pq9x: Crea tu librería en React: Carousel
+# hlo9: Resolviendo Type Challenges
+# 3vlg: Modelado del dominio: Value Objects
+# tpnf: Asincronía en JavaScript
+# 69dk: Visual Studio Code: Productividad y Setup
+# 1voa: DDD, Microservicios e Infra en Audiense, Genially y Codely
+# lsr8: Web Portfolio desde 0 en directo: Next.js vs Gatsby
+# 5159: Arquitectura Hexagonal en Frontend
+# dwlb: Auditoría web: Ryanair
+# e05m: Terraform: Buenas prácticas llevando tu infraestructura a código
+# 3kjx: Buenas prácticas con CSS: selectores
+# daeb: Tratamiento de datos en Bash: Gestiona archivos JSON, XML, YAML
+# dlfg: Auditoría Holaluz
+# u2rx: React de 0 aplicando buenas prácticas
+# dqqw: API HTTP en Kotlin aplicando Arquitectura Hexagonal
+# x7jp: DDD en TypeScript: Comunicación entre servicios y aplicaciones
+# 7ym8: Linting en JavaScript y TypeScript
+# e2xv: Desarrolla plugins de Figma con TypeScript
+# zqpy: Patrones de Diseño de Comportamiento
+# reg5: TypeScript Avanzado: Más alla de any
+# 5biq: Maquetando la web de Codely desde 0
+# 15r2: Gestión de logs con Loki y Grafana
+# ajqi: Entrevistas sobre eXtreme Programming
+# uxw9: TDD: Test-Driven Development
+# 1non: Directos exclusivos CodelyTV Pro
+# ikay: Setup macOS para Programar
+# z1be: Lightning Talks
+# drii: eXtreme Programming
+# x6zg: Introducción a Kotlin: Tu primera app
+# w9e6: DDD en TypeScript: Modelado y arquitectura
+# ui0b: Auditorías y Acompañamientos
+# ji5p: Gestión de Estado en React
+# u0oh: Web performance
+# 5i9m: Patrones de Diseño: Creacionales
+# mxxx: CSS Flex a fondo
+# nowm: De JavaScript a TypeScript
+# hrlj: Symfony mantenible y escalable
+# xcih: CSS Grid a fondo
+# bghw: Setup Linux para Programar
+# ar46: JavaScript moderno
+# 6h5y: Refactoring de Code Smells a Clean Code: Change Preventers
+# 0yci: Light & Dark themes accesibles
+# e9dg: API HTTP en Go aplicando Arquitectura Hexagonal
+# odo8: Testing en frontend
+# u136: Karabiner: Atajos de teclado para todo
+# sah6: Arquitectura CSS
+# itc6: PHP 8: Novedades y ejemplos para el Mundo Real™
+# qoh2: Vue 3: Novedades aplicadas al mundo real
+# 2eym: Buenas prácticas con CSS: Layouts
+# oysg: Refactoring de Code Smells a Clean Code: Bloaters
+# cnir: Teclados Mecánicos
+# hm9m: Makefiles
+# q7zn: Monitoring con Prometheus
+# s4mk: Visualiza métricas de Prometheus con Grafana
+# 9qt7: Notion: Productividad en equipo
+# rcmp: Bash para el día a día: Scripting & Productividad
+# y9q0: Todo sobre los dotfiles
+# wykx: Productividad con iTerm: Terminal macOS
+# dx7x: Automatiza tu flujo de trabajo con GitHub Actions
+# v5km: Terminal 100% productiva con Zsh
+# xmhl: Integración Continua con GitHub Actions
+# p634: Exprimiendo IntelliJ
+# z9wp: DDD en Java
+# bk6k: DDD en PHP
+# vvj7: Git: Introducción y trabajo en equipo
+# o9me: Testing: Introducción y buenas prácticas
+# 70ig: Introducción a Go: Tu primera app
+# atft: Domain-Driven Design: DDD Aplicado
+# ca5o: Kubernetes para desarrolladores
+# j685: Migrando a VueJS progresivamente
+# gxng: ELK: Centraliza logs con Elastic Stack
+# ahbk: Principios SOLID aplicados
+# dgoq: Comunicación entre microservicios: Event-Driven Architecture
+# t0md: Programación funcional: Refactor de OO a TypeClasses
+# gcix: Docker: De 0 a deploy
+# x2aj: CQRS y Event Sourcing con Kotlin y Axon Framework
+# 1eyy: Tu primera API HTTP con Scala
+# t5m4: Arquitectura Hexagonal
+# e652: AWS: Escalando apps - Load Balancers y Auto Scaling Groups
+# lk14: Buenas prácticas de BDD con Gherkin
+# hfaj: Introducción a Scala
+# hfl1: AWS EC2: Tu primer deploy
+# q7ai: CQRS: Command Query Responsibility Segregation

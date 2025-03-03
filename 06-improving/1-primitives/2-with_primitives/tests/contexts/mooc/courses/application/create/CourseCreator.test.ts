@@ -11,22 +11,19 @@ describe("CourseCreator should", () => {
 
 	it("create a valid course", async () => {
 		const expectedCourse = CourseMother.create();
+		const coursePrimitives = expectedCourse.toPrimitives();
 
-		const createdDomainEvent = CourseCreatedDomainEventMother.create(
-			expectedCourse.idValue(),
-			expectedCourse.nameValue(),
-			expectedCourse.summaryValue(),
-			expectedCourse.categoriesValue(),
-		);
+		const createdDomainEvent =
+			CourseCreatedDomainEventMother.create(coursePrimitives);
 
 		repository.shouldSave(expectedCourse);
 		eventBus.shouldPublish([createdDomainEvent]);
 
 		await courseCreator.create(
-			expectedCourse.idValue(),
-			expectedCourse.nameValue(),
-			expectedCourse.summaryValue(),
-			expectedCourse.categoriesValue(),
+			coursePrimitives.id,
+			coursePrimitives.name,
+			coursePrimitives.summary,
+			coursePrimitives.categories,
 		);
 	});
 });

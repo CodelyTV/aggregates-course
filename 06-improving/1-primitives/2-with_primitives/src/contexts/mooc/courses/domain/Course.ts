@@ -40,12 +40,7 @@ export class Course extends AggregateRoot {
 		summary: string,
 		categories: string[],
 	): Course {
-		const course = new Course(
-			new CourseId(id),
-			new CourseName(name),
-			new CourseSummary(summary),
-			categories.map((category) => new CourseCategory(category)),
-		);
+		const course = Course.fromPrimitives({ id, name, summary, categories });
 
 		course.record(
 			new CourseCreatedDomainEvent(id, name, summary, categories),

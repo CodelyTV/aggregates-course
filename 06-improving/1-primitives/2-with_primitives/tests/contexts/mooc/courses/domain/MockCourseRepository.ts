@@ -9,12 +9,7 @@ export class MockCourseRepository implements CourseRepository {
 	private readonly mockDelete = jest.fn();
 
 	async save(course: Course): Promise<void> {
-		expect(this.mockSave).toHaveBeenCalledWith(
-			expect.objectContaining({
-				...course,
-				domainEvents: expect.anything(),
-			}),
-		);
+		expect(this.mockSave).toHaveBeenCalledWith(course.toPrimitives());
 
 		return Promise.resolve();
 	}
@@ -38,11 +33,11 @@ export class MockCourseRepository implements CourseRepository {
 	}
 
 	shouldSave(course: Course): void {
-		this.mockSave(course);
+		this.mockSave(course.toPrimitives());
 	}
 
 	shouldSearch(course: Course): void {
-		this.mockSearch(new CourseId(course.idValue()));
+		this.mockSearch(course.id);
 		this.mockSearch.mockReturnValueOnce(course);
 	}
 

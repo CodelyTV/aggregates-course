@@ -1,22 +1,28 @@
+import { Primitives } from "@codelytv/primitives-type";
+import { faker } from "@faker-js/faker";
+
+import { Course } from "../../../../../src/contexts/mooc/courses/domain/Course";
 import { CourseCreatedDomainEvent } from "../../../../../src/contexts/mooc/courses/domain/CourseCreatedDomainEvent";
 
-import { CourseCategoriesMother } from "./CourseCategoriesMother";
 import { CourseIdMother } from "./CourseIdMother";
-import { CourseNameMother } from "./CourseNameMother";
-import { CourseSummaryMother } from "./CourseSummaryMother";
 
 export class CourseCreatedDomainEventMother {
 	static create(
-		id?: string,
-		name?: string,
-		summary?: string,
-		categories?: string[],
+		params?: Partial<Primitives<CourseCreatedDomainEvent>>,
 	): CourseCreatedDomainEvent {
+		const primitives: Primitives<Course> = {
+			id: CourseIdMother.create().value,
+			name: faker.internet.domainWord(),
+			summary: faker.lorem.word({ length: 10 }),
+			categories: [faker.lorem.word()],
+			...params,
+		};
+
 		return new CourseCreatedDomainEvent(
-			id ?? CourseIdMother.create().value,
-			name ?? CourseNameMother.create().value,
-			summary ?? CourseSummaryMother.create().value,
-			categories ?? CourseCategoriesMother.create().value(),
+			primitives.id,
+			primitives.name,
+			primitives.summary,
+			primitives.categories,
 		);
 	}
 }

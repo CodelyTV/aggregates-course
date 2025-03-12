@@ -14,6 +14,7 @@ transform it to code.
 ```
 
 # Instructions to transform the Aggregate Design Blueprint to code:
+
 You have to create:
 * A module for the aggregate:
     * The module name should be the name of the aggregate in plural.
@@ -57,11 +58,36 @@ You have to create:
 * You should create a test for the repository implementation:
     * The test should be inside the `tests/contexts/$CONTEXT_NAME/$MODULE_NAME/infrastructure` directory.
 
+# Protocol to execute the transformation:
+
+## 1. Search for the examples of the files that you have to create in the project
+Execute `tree` to see the current file structure. Then use `cat` to see the content of similar files.
+
+## 2. Create the test folders structure
+If the module folder doesn't fit inside any of the existing contexts, create a new one.
+
+## 3. Create the test for the first use case
+* We should create use case by use case, starting with the first one.
+* We're doing TDD, so we'll create the first use case test first.
+* Also, we'll create all the object mothers.
+* Then all the domain objects (if needed).
+* Then the use case.
+* Do it until the created test passes.
+* Repeat this per every use case.
+
+## 4. Create the repository implementation test
+* We should create the repository implementation test after all the use cases are created.
+* First, create the repository implementation test.
+* Then, create the repository implementation.
+* Do it until the created test passes.
+
 # User variables:
+
 $FOLDERS_CASE = kebab-case
 $FILES_FORMAT = ts
 
 # User Codely Aggregate Design Blueprint:
+
 ```
 * Name: Naive Bank Account
 * Description: An aggregate modelling in a very naive way a personal bank account. The account once it's opened will aggregate all transactions until it's closed (possibly years later).

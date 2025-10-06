@@ -26,6 +26,6 @@ module.exports = {
 	},
 	testPathIgnorePatterns: ["node_modules"],
 	transformIgnorePatterns: [
-		"/node_modules/(?!(nanoid|@codelytv/mcp-client|@modelcontextprotocol/sdk)/)",
+		"/node_modules/(?!(nanoid|@codelytv/mcp-client|@modelcontextprotocol/sdk|uuid|@faker-js/faker)/)",
 	],
 };

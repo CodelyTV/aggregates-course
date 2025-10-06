@@ -1,0 +1,19 @@
+### List all courses
+GET http://localhost:3000/api/mooc/courses
+Content-Type: application/json
+
+### List all courses paginated
+GET http://localhost:3000/api/mooc/courses/paginated?cursor=Z1JUMg==
+Content-Type: application/json
+
+### Find similar course by name
+GET http://localhost:3000/api/mooc/courses/by-similar-name?name=Curso%20de%20React
+Content-Type: application/json
+
+### Search similar courses
+GET http://localhost:3000/api/mooc/courses/similar-to-courses?ids=wuzn,xcih,u2rx
+Content-Type: application/json
+
+# wuzn = Buenas prácticas con CSS: Colores
+# xcih = CSS Grid a fondo
+# u2rx = React de 0 aplicando buenas prácticas

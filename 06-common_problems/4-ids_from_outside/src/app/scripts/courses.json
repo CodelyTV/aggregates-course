@@ -1,0 +1,973 @@
+[
+  {
+    "id": "cl3c",
+    "name": "Clean Code",
+    "summary": "Aplica Clean Code a tu código para que sea más mantenible, escalable y testable.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2024-09-12"
+  },
+  {
+    "id": "3rr0",
+    "name": "Modelado del Dominio: Excepciones vs Errores",
+    "summary": "Aprende a modelar los errores que suceden en tu aplicación de una manera mantenible.",
+    "categories": [
+      "backend",
+      "arquitectura-software"
+    ],
+    "published_at": "2024-08-01"
+  },
+  {
+    "id": "tx4n",
+    "name": "Diseño de Infraestructura: Transacciones",
+    "summary": "Aprende cómo y dónde añadir transacciones en tu aplicación para que sea más mantenible.",
+    "categories": [
+      "backend",
+      "arquitectura-software"
+    ],
+    "published_at": "2024-07-16"
+  },
+  {
+    "id": "c4ch",
+    "name": "Diseño de Infraestructura: Caché",
+    "summary": "Las cachés son un parche, pero un parche en el sitio correcto mejora el rendimiento y mantenibilidad de tu aplicación.",
+    "categories": [
+      "backend",
+      "arquitectura-software"
+    ],
+    "published_at": "2024-06-27"
+  },
+  {
+    "id": "viws",
+    "name": "Diseño de Infraestructura: Vistas",
+    "summary": "Utiliza las vistas y las vistas materializadas para escalar tu aplicación.",
+    "categories": [
+      "backend",
+      "arquitectura-software"
+    ],
+    "published_at": "2024-05-30"
+  },
+  {
+    "id": "iabp",
+    "name": "Añade Inteligencia Artificial siguiendo buenas prácticas",
+    "summary": "Añade IA a tu web siguiendo buenas prácticas de software.",
+    "categories": [
+      "backend",
+      "arquitectura-software"
+    ],
+    "published_at": "2024-04-18"
+  },
+  {
+    "id": "3j0r",
+    "name": "Modelado del dominio: Proyecciones",
+    "summary": "Domina las Proyecciones en el diseño de software para hacer tus aplicaciones más mantenibles, escalables y testeables.",
+    "categories": [
+      "backend",
+      "arquitectura-software"
+    ],
+    "published_at": "2024-04-04"
+  },
+  {
+    "id": "8l2o",
+    "name": "Diseño de infraestructura: AWS SQS como cola de mensajería",
+    "summary": "Añade escalabilidad a tu aplicación utilizando AWS SQS con un diseño de colas óptimo.",
+    "categories": [
+      "backend",
+      "arquitectura-software",
+      "devops"
+    ],
+    "published_at": "2024-03-07"
+  },
+  {
+    "id": "t6oe",
+    "name": "Patrones de Diseño: Criteria",
+    "summary": "Utiliza el Patrón de Diseño Criteria para respetar SOLID en tus casos de uso y repositorios.",
+    "categories": [
+      "backend",
+      "arquitectura-software"
+    ],
+    "published_at": "2024-01-25"
+  },
+  {
+    "id": "8r84",
+    "name": "Diseño de infraestructura: RabbitMQ como cola de mensajería",
+    "summary": "Añade escalabilidad a tu aplicación utilizando RabbitMQ con un diseño de colas óptimo.",
+    "categories": [
+      "backend",
+      "arquitectura-software",
+      "devops"
+    ],
+    "published_at": "2024-01-18"
+  },
+  {
+    "id": "31ev",
+    "name": "Diseño de infraestructura: Mapeo de herencia en PHP",
+    "summary": "La herencia puede ser buena. En este curso vemos cómo llevar ese concepto a la base de datos.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2024-01-11"
+  },
+  {
+    "id": "oy5t",
+    "name": "Next.js: Open Graph Images",
+    "summary": "Genera imágenes dinámicas en tus proyectos Next.js para compartir en redes sociales.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2023-12-14"
+  },
+  {
+    "id": "s5j7",
+    "name": "Problemas con DDD: Gestión de errores en Eventos de Domino",
+    "summary": "Profundiza en los principales problemas al publicar y consumir eventos de dominio.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2023-11-16"
+  },
+  {
+    "id": "57j6",
+    "name": "Linting en PHP",
+    "summary": "Añade un estándar de código en tu proyecto PHP o crea uno nuevo extendiendo estándares PSR y PER.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2023-11-02"
+  },
+  {
+    "id": "kzg5",
+    "name": "Modelado del Dominio: Eventos de Dominio",
+    "summary": "Domina los Eventos de Dominio en el diseño de software y haz tus aplicaciones más mantenibles, escalables y testables.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2023-10-25"
+  },
+  {
+    "id": "i36n",
+    "name": "Análisis de código estático en PHP",
+    "summary": "PHP no es un lenguaje compilado, pero con el análisis de código estático podemos tener sus ventajas.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2023-10-05"
+  },
+  {
+    "id": "2505",
+    "name": "Modelado del dominio: Agregados",
+    "summary": "Domina los Agregados en el diseño de software y haz tus aplicaciones más mantenibles, escalables y testables.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2023-09-14"
+  },
+  {
+    "id": "wuzn",
+    "name": "Buenas prácticas con CSS: Colores",
+    "summary": "Domina el uso de colores en CSS para crear sitios visualmente impactantes y accesibles. Utiliza CSS moderno como puede ser lch para la gestión de colores.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2023-09-07"
+  },
+  {
+    "id": "p7en",
+    "name": "TypeScript Avanzado: Mejora tu Developer eXperience",
+    "summary": "Aprende a enriquecer la definición de tus funciones con utility types, const type parameters y satisfies lo que te permitirá ganar robustez y facilidad de uso en el día a día.",
+    "categories": [
+      "frontend",
+      "backend"
+    ],
+    "published_at": "2023-08-10"
+  },
+  {
+    "id": "nsy6",
+    "name": "Grafana",
+    "summary": "Aprende a visualizar y analizar datos históricos y/o en tiempo real, a crear dashboards interactivos y a configurar tus alertas personalizadas.",
+    "categories": [
+      "backend",
+      "devops"
+    ],
+    "published_at": "2023-08-03"
+  },
+  {
+    "id": "0y7k",
+    "name": "Modelado del dominio: Repositorios",
+    "summary": "El patrón Repository es uno de los más fáciles de entender, pero también de los más fáciles de implementar de manera incorrecta. En el curso vemos cómo evitarlo.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2023-07-06"
+  },
+  {
+    "id": "pq9x",
+    "name": "Crea tu librería en React: Carousel",
+    "summary": "Aprende cómo desarrollar tu propia librería JavaScript para React acompañándonos en la creación del Carousel de nuestra web siguiendo buenas prácticas.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2023-06-29"
+  },
+  {
+    "id": "hlo9",
+    "name": "Resolviendo Type Challenges",
+    "summary": "Profundizando en TypeScript a través de retos avanzados.",
+    "categories": [
+      "backend",
+      "frontend"
+    ],
+    "published_at": "2023-06-20"
+  },
+  {
+    "id": "3vlg",
+    "name": "Modelado del dominio: Value Objects",
+    "summary": "El patrón Value Object es uno de los más conocidos, pero también uno de los más odiados. En el curso vemos cómo sacarle todo el partido y cómo facilitar su uso para convertir en amor ese odio.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2023-06-08"
+  },
+  {
+    "id": "tpnf",
+    "name": "Asincronía en JavaScript",
+    "summary": "Domina la asincronía en JavaScript: entiende y aplica eficientemente conceptos como callbacks, promesas, async/await, y otros métodos de asincronía en tus proyectos.",
+    "categories": [
+      "frontend",
+      "backend"
+    ],
+    "published_at": "2023-05-18"
+  },
+  {
+    "id": "69dk",
+    "name": "Visual Studio Code: Productividad y Setup",
+    "summary": "Mejora tu productividad sacándole todo el provecho a Visual Studio Code. Desde un aspecto minimalista a un dominio de todos sus atajos más escondidos.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2023-04-27"
+  },
+  {
+    "id": "1voa",
+    "name": "DDD, Microservicios e Infra en Audiense, Genially y Codely",
+    "summary": "Sesiones donde hablamos sobre DDD, Microservicios e Infraestructura en Audiense, Genially y Codely.",
+    "categories": [
+      "backend",
+      "devops"
+    ],
+    "published_at": "2023-04-06"
+  },
+  {
+    "id": "lsr8",
+    "name": "Web Portfolio desde 0 en directo: Next.js vs Gatsby",
+    "summary": "Serie de directos comparando la creación de un portfolio web utilizando Next.js y Gatsby, ambos desplegados en diferentes plataformas, permitiéndote aprender y comparar las tecnologías.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2023-04-06"
+  },
+  {
+    "id": "5159",
+    "name": "Arquitectura Hexagonal en Frontend",
+    "summary": "Aprende a implementar Arquitectura Hexagonal en tus aplicaciones frontend",
+    "categories": [
+      "frontend",
+      "arquitectura-software"
+    ],
+    "published_at": "2023-03-30"
+  },
+  {
+    "id": "dwlb",
+    "name": "Auditoría web: Ryanair",
+    "summary": "Analizamos en directo el rendimiento, accesibilidad y UX de la web de Ryanair",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2023-03-15"
+  },
+  {
+    "id": "e05m",
+    "name": "Terraform: Buenas prácticas llevando tu infraestructura a código",
+    "summary": "Cuando trabajas con infraestructura en la nube debes prepararte para poder realizar cualquier cambio sin peligro alguno. En este curso te contamos cómo versionar y automatizar toda la infraestructura de tu aplicación.",
+    "categories": [
+      "devops"
+    ],
+    "published_at": "2023-02-23"
+  },
+  {
+    "id": "3kjx",
+    "name": "Buenas prácticas con CSS: selectores",
+    "summary": "Aprende a aplicar buenas prácticas a tus selectores CSS entendiendo bien las bases.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2023-02-16"
+  },
+  {
+    "id": "daeb",
+    "name": "Tratamiento de datos en Bash: Gestiona archivos JSON, XML, YAML",
+    "summary": "Bash es el lenguaje de scripting más famoso que hay. Aprende a sacarle todo el potencial para gestionar nuestros JSONs, YAMLs…",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2023-01-12"
+  },
+  {
+    "id": "dlfg",
+    "name": "Auditoría Holaluz",
+    "summary": "Sesión de auditoría en la que se revisa el diseño y arquitectura de software de una parte de los sistemas de Holaluz.",
+    "categories": [
+      "arquitectura-software",
+      "backend",
+      "devops"
+    ],
+    "published_at": "2022-12-07"
+  },
+  {
+    "id": "u2rx",
+    "name": "React de 0 aplicando buenas prácticas",
+    "summary": "Introdúcete en React desde 0 creando tu developer dashboard personal dónde podrás consultar las métricas de tus repositorios favoritos.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2022-11-17"
+  },
+  {
+    "id": "dqqw",
+    "name": "API HTTP en Kotlin aplicando Arquitectura Hexagonal",
+    "summary": "Aprende a desarrollar tu primera API HTTP en Kotlin aplicando algunos de los fundamentos de la Arquitectura Hexagonal.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2022-10-27"
+  },
+  {
+    "id": "x7jp",
+    "name": "DDD en TypeScript: Comunicación entre servicios y aplicaciones",
+    "summary": "Comunica servicios y aplicaciones usando Domain-Driven Design (DDD) y TypeScript y consigue así que el software y los equipos escalen de forma progresiva.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2022-10-06"
+  },
+  {
+    "id": "7ym8",
+    "name": "Linting en JavaScript y TypeScript",
+    "summary": "Aprende a sacarle todo el partido a ESLint para llevar tu código al siguiente nivel.",
+    "categories": [
+      "tooling",
+      "frontend",
+      "backend"
+    ],
+    "published_at": "2022-09-09"
+  },
+  {
+    "id": "e2xv",
+    "name": "Desarrolla plugins de Figma con TypeScript",
+    "summary": "Ves un paso más allá y desarrolla plugins mantenibles, escalables y testables para figma con TypeScript. Diseño y desarrollo se dan la mano.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2022-08-31"
+  },
+  {
+    "id": "zqpy",
+    "name": "Patrones de Diseño de Comportamiento",
+    "summary": "Aprende las implicaciones a nivel de SOLID y de mantenimiento de los Patrones de Diseño de Comportamiento.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2022-07-07"
+  },
+  {
+    "id": "reg5",
+    "name": "TypeScript Avanzado: Más alla de any",
+    "summary": "En este curso vamos a sentar las bases de TypeScript avanzado con el objetivo de ir estableciendo los conocimientos básicos para futuros cursos en los que profundizaremos más en otros aspectos de esta herramienta de desarrollo.",
+    "categories": [
+      "frontend",
+      "backend"
+    ],
+    "published_at": "2022-05-25"
+  },
+  {
+    "id": "5biq",
+    "name": "Maquetando la web de Codely desde 0",
+    "summary": "Llevaremos un diseño en Figma a una web en producción, con un design system escalable y teniendo en cuenta performance, SEO, y accesibilidad.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2022-05-18"
+  },
+  {
+    "id": "15r2",
+    "name": "Gestión de logs con Loki y Grafana",
+    "summary": "Aprende a gestionar tus logs con Grafana y Loki, las buenas prácticas y cómo se diferencia del stack de ELKi",
+    "categories": [
+      "backend",
+      "devops"
+    ],
+    "published_at": "2022-04-13"
+  },
+  {
+    "id": "ajqi",
+    "name": "Entrevistas sobre eXtreme Programming",
+    "summary": "Contenido adicional del curso de eXtreme Programming",
+    "categories": [
+      "metodologias-buenas-practicas"
+    ],
+    "published_at": "2022-04-01"
+  },
+  {
+    "id": "uxw9",
+    "name": "TDD: Test-Driven Development",
+    "summary": "Aprende Test-Driven Development (TDD) y las diferentes formas y estilos de aplicarlo en aplicaciones del Mundo Real™️",
+    "categories": [
+      "arquitectura-software",
+      "metodologias-buenas-practicas"
+    ],
+    "published_at": "2022-03-24"
+  },
+  {
+    "id": "1non",
+    "name": "Directos exclusivos CodelyTV Pro",
+    "summary": "Directos exclusivos resolviendo dudas, teniendo debates, y preparando siguientes cursos en base a vuestro feedback",
+    "categories": [
+      "arquitectura-software",
+      "frontend",
+      "backend"
+    ],
+    "published_at": "2021-05-26"
+  },
+  {
+    "id": "ikay",
+    "name": "Setup macOS para Programar",
+    "summary": "Configura tu ordenador con Mac tal y cómo lo tienen Nino y Rafa para programar lo más cómodamente posible.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2022-03-03"
+  },
+  {
+    "id": "z1be",
+    "name": "Lightning Talks",
+    "summary": "Charlas de 10-20 minutos sobre temas variados. Hasta ahora eran internas al equipo Codely, pero… si a nosotros nos aportan valor, puede que a ti también",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2022-02-16"
+  },
+  {
+    "id": "drii",
+    "name": "eXtreme Programming",
+    "summary": "Descubre las prácticas de eXtreme Programming y su aplicación en el Mundo Real™",
+    "categories": [
+      "metodologias-buenas-practicas"
+    ],
+    "published_at": "2022-01-26"
+  },
+  {
+    "id": "x6zg",
+    "name": "Introducción a Kotlin: Tu primera app",
+    "summary": "Desarrolla tu primer comando de consola con Kotlin mientras aprendes qué hace tan potente a este lenguaje.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2022-01-05"
+  },
+  {
+    "id": "w9e6",
+    "name": "DDD en TypeScript: Modelado y arquitectura",
+    "summary": "Crea paso a paso tu aplicación TypeScript siguiendo Domain-Driven Design.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2021-11-24"
+  },
+  {
+    "id": "ui0b",
+    "name": "Auditorías y Acompañamientos",
+    "summary": "Sesión de auditoría en la que se revisa el diseño y arquitectura de software de una parte de tus sistemas y de Acompañamiento dónde te ayudamos a mejorar tu aprendizaje",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2021-11-26"
+  },
+  {
+    "id": "ji5p",
+    "name": "Gestión de Estado en React",
+    "summary": "Conoce las distintas herramientas con la que puedes gestionar el estado en tu aplicación React.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2021-11-03"
+  },
+  {
+    "id": "u0oh",
+    "name": "Web performance",
+    "summary": "Aprende a optimizar tus aplicaciones web y a crear una cultura de performance para mantenerla a largo plazo.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2021-09-29"
+  },
+  {
+    "id": "5i9m",
+    "name": "Patrones de Diseño: Creacionales",
+    "summary": "Aprende las implicaciones a nivel de SOLID y de mantenimiento de los Patrones de Diseño Creacionales.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2021-09-08"
+  },
+  {
+    "id": "mxxx",
+    "name": "CSS Flex a fondo",
+    "summary": "Aprende a sacar todo el potencial de CSS Flex para crear layouts adaptables fácilmente.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2021-09-01"
+  },
+  {
+    "id": "nowm",
+    "name": "De JavaScript a TypeScript",
+    "summary": "Aprende TypeScript partiendo de un ejemplo de JavaScript en el que haremos el proceso de refactor poco a poco y analizando las principales características de TypeScript.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2021-06-14"
+  },
+  {
+    "id": "hrlj",
+    "name": "Symfony mantenible y escalable",
+    "summary": "Aprende herramientas y prácticas con Symfony para conseguir una mayor mantenibilidad y escalabilidad de tus aplicaciones.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2021-06-10"
+  },
+  {
+    "id": "xcih",
+    "name": "CSS Grid a fondo",
+    "summary": "Aprende a sacar provecho de CSS Grid para crear layouts flexibles sin necesidad de recurrir a frameworks.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2021-06-02"
+  },
+  {
+    "id": "bghw",
+    "name": "Setup Linux para Programar",
+    "summary": "Configura tu ordenador con Linux tal y cómo lo tiene Dani para programar lo más cómodamente posible.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2021-05-13"
+  },
+  {
+    "id": "ar46",
+    "name": "JavaScript moderno",
+    "summary": "Aprende buenas prácticas para empezar aplicaciones JavaScript vanilla desde 0 y refactorizar código legacy dando soporte a navegadores antiguos.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2021-04-07"
+  },
+  {
+    "id": "6h5y",
+    "name": "Refactoring de Code Smells a Clean Code: Change Preventers",
+    "summary": "Aprende a detectar y lidiar con código que genera aversión al cambio. Curso centrado en Code Smells de tipo Change Preventers.",
+    "categories": [
+      "arquitectura-software",
+      "metodologias-buenas-practicas"
+    ],
+    "published_at": "2021-04-15"
+  },
+  {
+    "id": "0yci",
+    "name": "Light & Dark themes accesibles",
+    "summary": "Aprende a implementar temas claros y oscuros en una página web de forma accesible, cómo integrarlo en tu arquitectura CSS y cómo adaptar los diseños para que te queden unos temas finísimos.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2021-03-03"
+  },
+  {
+    "id": "e9dg",
+    "name": "API HTTP en Go aplicando Arquitectura Hexagonal",
+    "summary": "Aprende a desarrollar tu primera API HTTP en Go aplicando algunos de los fundamentos de la Arquitectura Hexagonal.",
+    "categories": [
+      "backend",
+      "arquitectura-software"
+    ],
+    "published_at": "2021-01-27"
+  },
+  {
+    "id": "odo8",
+    "name": "Testing en frontend",
+    "summary": "Aprende cómo testear tus aplicaciones frontend, aplicando buenas prácticas para conseguir unos tests mantenibles que aporten confianza.",
+    "categories": [
+      "frontend",
+      "metodologias-buenas-practicas"
+    ],
+    "published_at": "2021-01-21"
+  },
+  {
+    "id": "u136",
+    "name": "Karabiner: Atajos de teclado para todo",
+    "summary": "¡Automatiza todo en tu mac a golpe de atajos de teclado y mejor tu productividad!",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2021-01-13"
+  },
+  {
+    "id": "sah6",
+    "name": "Arquitectura CSS",
+    "summary": "Aprende los fundamentos de una buena arquitectura CSS para que tus estilos sean fáciles de mantener y escalar.",
+    "categories": [
+      "frontend",
+      "arquitectura-software"
+    ],
+    "published_at": "2020-11-25"
+  },
+  {
+    "id": "itc6",
+    "name": "PHP 8: Novedades y ejemplos para el Mundo Real™",
+    "summary": "Migra tus aplicaciones a PHP 8 paso a paso, consigue tests más mantenibles gracias a Named Arguments, Value Objects más simples con Constructor Property Promotion, reemplaza PECL (obsoleto), y mucho más.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2020-11-18"
+  },
+  {
+    "id": "qoh2",
+    "name": "Vue 3: Novedades aplicadas al mundo real",
+    "summary": "Veremos cómo exprimir las novedades de Vue 3 con ejemplos reales y aplicando buenas prácticas.",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2020-10-28"
+  },
+  {
+    "id": "2eym",
+    "name": "Buenas prácticas con CSS: Layouts",
+    "summary": "",
+    "categories": [
+      "frontend",
+      "metodologias-buenas-practicas"
+    ],
+    "published_at": "2020-10-01"
+  },
+  {
+    "id": "oysg",
+    "name": "Refactoring de Code Smells a Clean Code: Bloaters",
+    "summary": "Aprende a detectar y lidiar con código incomprensible 🤟",
+    "categories": [
+      "arquitectura-software",
+      "metodologias-buenas-practicas"
+    ],
+    "published_at": "2020-09-24"
+  },
+  {
+    "id": "cnir",
+    "name": "Teclados Mecánicos",
+    "summary": "Monta tu teclado perfecto y personalizado al 100%",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2020-09-16"
+  },
+  {
+    "id": "hm9m",
+    "name": "Makefiles",
+    "summary": "El centralizar tareas de nuestras aplicaciones es algo muy importante, y con los Makefiles se simplifica mucho.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2020-08-19"
+  },
+  {
+    "id": "q7zn",
+    "name": "Monitoring con Prometheus",
+    "summary": "La observabilidad es una de las cosas más importantes de la programación y el Monitoring uno de sus principales pilares.",
+    "categories": [
+      "devops"
+    ],
+    "published_at": "2020-08-12"
+  },
+  {
+    "id": "s4mk",
+    "name": "Visualiza métricas de Prometheus con Grafana",
+    "summary": "Aprende a crear un panel de 10 utilizando Grafana con Prometheus como datasource.",
+    "categories": [
+      "devops"
+    ],
+    "published_at": "2020-08-12"
+  },
+  {
+    "id": "9qt7",
+    "name": "Notion: Productividad en equipo",
+    "summary": "Centraliza toda la documentación de tu equipo de trabajo y la gestión de tareas en 1 única herramienta: Notion.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2020-05-22"
+  },
+  {
+    "id": "rcmp",
+    "name": "Bash para el día a día: Scripting & Productividad",
+    "summary": "Aprende a usar la navaja suiza de los programadores 😬",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2020-05-29"
+  },
+  {
+    "id": "y9q0",
+    "name": "Todo sobre los dotfiles",
+    "summary": "Aprende a automatizar, centralizar y compartir todas tus configuraciones gracias a los dotfiles.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2020-04-23"
+  },
+  {
+    "id": "wykx",
+    "name": "Productividad con iTerm: Terminal macOS",
+    "summary": "Veremos cómo tener una terminal rapidísima y muy productiva gracias a unos simple (y escondidos) tips.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2020-04-23"
+  },
+  {
+    "id": "dx7x",
+    "name": "Automatiza tu flujo de trabajo con GitHub Actions",
+    "summary": "Crearemos nuestras propias actions (¡hasta publicaremos alguna en el Marketplace!) que nos puedan ser muy útiles en nuestro día a día.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2020-03-04"
+  },
+  {
+    "id": "v5km",
+    "name": "Terminal 100% productiva con Zsh",
+    "summary": "Consigue ser un Productivity Raptor™ con tu terminal gracias a Zsh, Oh My Zsh, Zim y funciones avanzadas.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2020-03-04"
+  },
+  {
+    "id": "xmhl",
+    "name": "Integración Continua con GitHub Actions",
+    "summary": "¡Consigue una Integración Continua de la que te puedas fiar y que sea rapidísima! Gracias a GitHub Actions veremos como lograrlo.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2020-03-04"
+  },
+  {
+    "id": "p634",
+    "name": "Exprimiendo IntelliJ",
+    "summary": "¡Mejora tu productividad exprimiendo IntelliJ! Consigue un aspecto minimalista, crea ficheros con plantillas personalizadas, atajos secretos, y mucho más.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2020-03-04"
+  },
+  {
+    "id": "z9wp",
+    "name": "DDD en Java",
+    "summary": "Crea paso a paso tu aplicación Java siguiendo Domain-Driven Design. Estructura de carpetas, integración con BD, sistema de colas, CQRS y más.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2019-09-19"
+  },
+  {
+    "id": "bk6k",
+    "name": "DDD en PHP",
+    "summary": "Crea paso a paso tu aplicación PHP siguiendo Domain-Driven Design. Estructura de carpetas, integración con BD, sistema de colas, CQRS y más.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2019-07-30"
+  },
+  {
+    "id": "vvj7",
+    "name": "Git: Introducción y trabajo en equipo",
+    "summary": "Aprende a trabajar en equipo con Git y sacarle todo el provecho con aspectos avanzados como debugging, estrategias de merge, y mucho más.",
+    "categories": [
+      "tooling"
+    ],
+    "published_at": "2019-06-26"
+  },
+  {
+    "id": "o9me",
+    "name": "Testing: Introducción y buenas prácticas",
+    "summary": "Aprende qué aporta el testing, cómo testear y buenas prácticas para evitar que mantener tus tests sea un infierno con ejemplos de El Mundo Real™",
+    "categories": [
+      "arquitectura-software",
+      "metodologias-buenas-practicas"
+    ],
+    "published_at": "2019-05-15"
+  },
+  {
+    "id": "70ig",
+    "name": "Introducción a Go: Tu primera app",
+    "summary": "Desarrolla tu primer comando de consola con Go mientras aprendes qué hace diferente al lenguaje de moda.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2019-06-05"
+  },
+  {
+    "id": "atft",
+    "name": "Domain-Driven Design: DDD Aplicado",
+    "summary": "Aprende a modelar tus aplicaciones centrándote en tu dominio, definir Bounded Contexts, agregados, value objects, y mucho más. Todo de forma práctica y con ejemplos de código",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2019-02-20"
+  },
+  {
+    "id": "ca5o",
+    "name": "Kubernetes para desarrolladores",
+    "summary": "Aprende a orquestrar contenedores de Docker y desplegarlos en Azure, GCE, o AWS siguiendo buenas prácticas",
+    "categories": [
+      "devops"
+    ],
+    "published_at": "2018-11-20"
+  },
+  {
+    "id": "j685",
+    "name": "Migrando a VueJS progresivamente",
+    "summary": "Aprende cómo migrar un frontend ya existente a Vue.js partiendo de HTML, CSS y JS generado por backend",
+    "categories": [
+      "frontend"
+    ],
+    "published_at": "2019-02-13"
+  },
+  {
+    "id": "gxng",
+    "name": "ELK: Centraliza logs con Elastic Stack",
+    "summary": "Aprende a montar un stack para poder explotar toda la información de tus logs gracias a Elasticsearch, Logstash o Beats, y Kibana",
+    "categories": [
+      "devops",
+      "backend"
+    ],
+    "published_at": "2019-04-05"
+  },
+  {
+    "id": "ahbk",
+    "name": "Principios SOLID aplicados",
+    "summary": "Si ya sabes desarrollar software, pero quieres ir un paso más allá y mejorar la calidad de tu código, este es tu curso",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2018-08-30"
+  },
+  {
+    "id": "dgoq",
+    "name": "Comunicación entre microservicios: Event-Driven Architecture",
+    "summary": "Publica y consume eventos de dominio, consistencia eventual, RabbitMQ y AWS SNS-SQS, migración de monolito a servicios, y mucho más.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2018-06-26"
+  },
+  {
+    "id": "t0md",
+    "name": "Programación funcional: Refactor de OO a TypeClasses",
+    "summary": "Introducción a la programación funcional pura en Scala y a sus ventajas de la mano de las type classes.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2018-04-16"
+  },
+  {
+    "id": "gcix",
+    "name": "Docker: De 0 a deploy",
+    "summary": "Aprende qué es Docker y cómo sacar el mayor partido a los contenedores. Empezando desde el principio, veremos cómo usar Docker para levantar tu aplicación en local como si fuese producción, arrancando una base de datos con Docker Compose.",
+    "categories": [
+      "devops"
+    ],
+    "published_at": "2018-03-19"
+  },
+  {
+    "id": "x2aj",
+    "name": "CQRS y Event Sourcing con Kotlin y Axon Framework",
+    "summary": "Aprenderemos qué es Event Sourcing y cómo se complementa con la arquitectura CQRS. La parte práctica del curso consistirá en un desarrollo de un carrito de la compra para un ecommerce usando Kotlin y el framework Axon.",
+    "categories": [
+      "backend",
+      "arquitectura-software"
+    ],
+    "published_at": "2018-02-15"
+  },
+  {
+    "id": "1eyy",
+    "name": "Tu primera API HTTP con Scala",
+    "summary": "Habiendo hecho el primer curso de introducción a Scala ya nos podemos meter en materia y desarrollar nuestra primera API HTTP con Scala, Akka, base de datos, y mucho más.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2017-12-12"
+  },
+  {
+    "id": "t5m4",
+    "name": "Arquitectura Hexagonal",
+    "summary": "Domain-Driven Design se apoya en la Arquitectura Hexagonal como uno de sus pilares a nivel técnico. Aprende a implementarla con CodelyTV!",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2017-12-10"
+  },
+  {
+    "id": "e652",
+    "name": "AWS: Escalando apps - Load Balancers y Auto Scaling Groups",
+    "summary": "José Armesto seguirá la serie de cursos sobre AWS hablando de cómo escalar. Introduciremos los Load Balancers y Auto Scaling Groups de AWS.",
+    "categories": [
+      "devops"
+    ],
+    "published_at": "2017-12-11"
+  },
+  {
+    "id": "lk14",
+    "name": "Buenas prácticas de BDD con Gherkin",
+    "summary": "Aprenderás desde los conceptos básicos para testear tu aplicación con Cucumber o Behat, hasta consejos de buenas prácticas para hacer que tu suite de tests sea más fácilmente mantenible.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2018-05-03"
+  },
+  {
+    "id": "hfaj",
+    "name": "Introducción a Scala",
+    "summary": "Scala es un lenguaje conciso, poco verboso, y que permite la programación funcional sin olvidar la POO. Aprenderemos cómo configurar el entorno, las bases del lenguaje, asincronía y otros tips para empezar.",
+    "categories": [
+      "backend"
+    ],
+    "published_at": "2017-09-19"
+  },
+  {
+    "id": "hfl1",
+    "name": "AWS EC2: Tu primer deploy",
+    "summary": "Aprende las bases de Amazon Web Services para levantar tu aplicación en la nube. Crea tu propia VPC, elige la instancia adecuada de EC2, configura SSH, elige tu AMI base, define Security Groups, deploya, y configura Route53 como DNS!",
+    "categories": [
+      "devops"
+    ],
+    "published_at": "2017-09-19"
+  },
+  {
+    "id": "q7ai",
+    "name": "CQRS: Command Query Responsibility Segregation",
+    "summary": "Aumenta el rendimiento y el desacoplamiento de tu backend mediante CQRS. Veremos conceptos e implementaciones de buses síncronos y asíncronos.",
+    "categories": [
+      "arquitectura-software"
+    ],
+    "published_at": "2017-09-19"
+  }
+]

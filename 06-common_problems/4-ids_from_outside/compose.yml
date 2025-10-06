@@ -1,0 +1,34 @@
+services:
+  postgres:
+    image: supabase/postgres:15.8.1.083
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: supabase_admin
+      POSTGRES_PASSWORD: c0d3ly7v
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./databases:/docker-entrypoint-initdb.d
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama_data:/root/.ollama
+      - ./etc/ollama/ollama-entrypoint.sh:/ollama-entrypoint.sh
+      - ./etc/ollama/ollama-healthcheck.sh:/ollama-healthcheck.sh
+    entrypoint: ["/ollama-entrypoint.sh"]
+    healthcheck:
+      test: ["CMD", "/ollama-healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+volumes:
+  db_data:
+  ollama_data:

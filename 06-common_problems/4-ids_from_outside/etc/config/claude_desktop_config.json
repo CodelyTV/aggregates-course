@@ -1,0 +1,11 @@
+{
+	"mcpServers": {
+		"codely-mcp-server": {
+			"command": "npx",
+			"args": ["ts-node", "/Users/rafa.gomez/Code/codely/mcp-course/99-poc/src/app/mcp/server.ts"],
+			"env": {
+				"PATH": "/run/current-system/sw/bin"
+			}
+		}
+	}
+}

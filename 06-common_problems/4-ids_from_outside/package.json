@@ -11,11 +11,7 @@
 		"test": "jest --testPathIgnorePatterns=.*\\.ci\\.test\\.ts$",
 		"test:ci": "jest --testMatch '**/*.ci.test.ts'",
 		"create-courses": "ts-node ./src/app/scripts/create-courses.ts",
-		"search-courses": "ts-node ./src/app/scripts/search-courses.ts",
-		"mcp:serve": "ts-node ./src/app/mcp/server.ts",
-		"mcp:debug:direct": "node debug-mcp-direct.js",
-		"mcp:inspect": "npx @modelcontextprotocol/inspector --transport http --server-url http://localhost:3000/api/mcp",
-		"mcp:inspect:debug": "npx @modelcontextprotocol/inspector ./start-mcp-debug.sh"
+		"search-courses": "ts-node ./src/app/scripts/search-courses.ts"
 	},
 	"dependencies": {
 		"@langchain/core": "^0.3.66",
@@ -24,7 +20,6 @@
 		"diod": "^3.0.0",
 		"langchain": "^0.3.30",
 		"mariadb": "^3.4.5",
-		"mcp-handler": "^1.0.1",
 		"modelfusion": "^0.137.0",
 		"next": "15.4.3",
 		"pgvector": "^0.2.1",
@@ -37,7 +32,6 @@
 		"zod": "^4.0.8"
 	},
 	"devDependencies": {
-		"@codelytv/mcp-client": "^0.7.0",
 		"@swc/core": "^1.13.3",
 		"@swc/jest": "^0.2.39",
 		"@codelytv/primitives-type": "^3.1.0",

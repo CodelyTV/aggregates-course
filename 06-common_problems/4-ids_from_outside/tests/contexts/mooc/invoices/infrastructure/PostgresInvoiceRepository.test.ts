@@ -123,4 +123,100 @@ describe("PostgresInvoiceRepository should", () => {
 			expect(nextNumberB).toBe(4);
 		});
 	});
+
+	describe("searchBySerieAndNumber", () => {
+		it("return null when invoice does not exist", async () => {
+			const serie = InvoiceSerieMother.create();
+
+			const invoice = await repository.searchBySerieAndNumber(
+				serie.value,
+				1,
+			);
+
+			expect(invoice).toBeNull();
+		});
+
+		it("search an existing invoice by serie and number", async () => {
+			const serie = InvoiceSerieMother.create();
+			const expectedInvoice = InvoiceMother.create({
+				serie: serie.value,
+				number: 1,
+			});
+			await repository.save(expectedInvoice);
+
+			const invoice = await repository.searchBySerieAndNumber(
+				serie.value,
+				1,
+			);
+
+			expect(invoice).not.toBeNull();
+			expect(invoice?.toPrimitives()).toEqual(
+				expectedInvoice.toPrimitives(),
+			);
+		});
+
+		it("not search an invoice with different serie", async () => {
+			const serieA = InvoiceSerieMother.create();
+			const serieB = InvoiceSerieMother.create();
+			const invoice = InvoiceMother.create({
+				serie: serieA.value,
+				number: 1,
+			});
+			await repository.save(invoice);
+
+			const foundInvoice = await repository.searchBySerieAndNumber(
+				serieB.value,
+				1,
+			);
+
+			expect(foundInvoice).toBeNull();
+		});
+
+		it("not search an invoice with different number", async () => {
+			const serie = InvoiceSerieMother.create();
+			const invoice = InvoiceMother.create({
+				serie: serie.value,
+				number: 1,
+			});
+			await repository.save(invoice);
+
+			const foundInvoice = await repository.searchBySerieAndNumber(
+				serie.value,
+				2,
+			);
+
+			expect(foundInvoice).toBeNull();
+		});
+
+		it("search correct invoice when multiple invoices exist", async () => {
+			const serieA = InvoiceSerieMother.create();
+			const serieB = InvoiceSerieMother.create();
+			const invoice1A = InvoiceMother.create({
+				serie: serieA.value,
+				number: 1,
+			});
+			const invoice2A = InvoiceMother.create({
+				serie: serieA.value,
+				number: 2,
+			});
+			const invoice1B = InvoiceMother.create({
+				serie: serieB.value,
+				number: 1,
+			});
+
+			await repository.save(invoice1A);
+			await repository.save(invoice2A);
+			await repository.save(invoice1B);
+
+			const foundInvoice = await repository.searchBySerieAndNumber(
+				serieA.value,
+				2,
+			);
+
+			expect(foundInvoice).not.toBeNull();
+			expect(foundInvoice?.toPrimitives()).toEqual(
+				invoice2A.toPrimitives(),
+			);
+		});
+	});
 });

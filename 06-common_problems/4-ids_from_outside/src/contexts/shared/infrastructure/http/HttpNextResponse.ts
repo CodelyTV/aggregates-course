@@ -47,4 +47,8 @@ export class HttpNextResponse {
 	static empty(): NextResponse {
 		return new NextResponse(null, { status: 204 });
 	}
+
+	static notFound(): NextResponse {
+		return new NextResponse(null, { status: 404 });
+	}
 }

@@ -47,6 +47,17 @@ export class PostgresInvoiceRepository
 		return (result[0] as { next_number: number }).next_number;
 	}
 
+	async searchBySerieAndNumber(
+		serie: string,
+		number: number,
+	): Promise<Invoice | null> {
+		return await this.searchOne`
+			SELECT id, serie, number, amount::float, vat_id
+			FROM mooc.invoices
+			WHERE serie = ${serie} AND number = ${number};
+		`;
+	}
+
 	protected toAggregate(row: DatabaseInvoiceRow): Invoice {
 		return Invoice.fromPrimitives({
 			id: row.id,

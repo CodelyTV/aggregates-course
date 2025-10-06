@@ -12,6 +12,7 @@ import { SimilarCoursesByIdsSearcher } from "../../../mooc/courses/application/s
 import { CourseRepository } from "../../../mooc/courses/domain/CourseRepository";
 import { PostgresCourseRepository } from "../../../mooc/courses/infrastructure/PostgresCourseRepository";
 import { InvoiceCreator } from "../../../mooc/invoices/application/create/InvoiceCreator";
+import { InvoiceBySerieAndNumberSearcher } from "../../../mooc/invoices/application/search-by-serie-and-number/InvoiceBySerieAndNumberSearcher";
 import { InvoiceRepository } from "../../../mooc/invoices/domain/InvoiceRepository";
 import { PostgresInvoiceRepository } from "../../../mooc/invoices/infrastructure/PostgresInvoiceRepository";
 import { UserCourseProgressCompleter } from "../../../mooc/user-course-progress/application/complete/UserCourseProgressCompleter";
@@ -94,6 +95,7 @@ builder.registerAndUse(CourseBySimilarNameFinder);
 builder.register(InvoiceRepository).use(PostgresInvoiceRepository);
 builder.registerAndUse(PostgresInvoiceRepository);
 builder.registerAndUse(InvoiceCreator);
+builder.registerAndUse(InvoiceBySerieAndNumberSearcher);
 
 // Export container
 export const container = builder.build();

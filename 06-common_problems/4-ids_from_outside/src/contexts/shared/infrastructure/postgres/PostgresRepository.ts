@@ -39,7 +39,7 @@ export abstract class PostgresRepository<T extends AggregateRoot> {
 	protected async execute(
 		strings: TemplateStringsArray,
 		...values: any[]
-	): Promise<void> {
-		await this.sql(strings, ...values);
+	): Promise<Row[]> {
+		return await this.sql(strings, ...values);
 	}
 }

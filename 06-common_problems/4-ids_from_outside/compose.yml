@@ -9,7 +9,6 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - db_data:/var/lib/postgresql/data
       - ./databases:/docker-entrypoint-initdb.d
 
   ollama:
@@ -28,6 +27,3 @@ services:
       timeout: 5s
       retries: 5
       start_period: 30s
-
-volumes:
-  db_data:

@@ -11,6 +11,9 @@ import { CoursesByIdsSearcher } from "../../../mooc/courses/application/search-b
 import { SimilarCoursesByIdsSearcher } from "../../../mooc/courses/application/search-similar-by-ids/SimilarCoursesByIdsSearcher";
 import { CourseRepository } from "../../../mooc/courses/domain/CourseRepository";
 import { PostgresCourseRepository } from "../../../mooc/courses/infrastructure/PostgresCourseRepository";
+import { InvoiceCreator } from "../../../mooc/invoices/application/create/InvoiceCreator";
+import { InvoiceRepository } from "../../../mooc/invoices/domain/InvoiceRepository";
+import { PostgresInvoiceRepository } from "../../../mooc/invoices/infrastructure/PostgresInvoiceRepository";
 import { UserCourseProgressCompleter } from "../../../mooc/user-course-progress/application/complete/UserCourseProgressCompleter";
 import { GenerateUserCourseSuggestionsOnUserCourseProgressCompleted } from "../../../mooc/user-course-suggestions/application/generate/GenerateUserCourseSuggestionsOnUserCourseProgressCompleted";
 import { UserCourseSuggestionsGenerator } from "../../../mooc/user-course-suggestions/application/generate/UserCourseSuggestionsGenerator";
@@ -86,6 +89,11 @@ builder.registerAndUse(SimilarCoursesByIdsSearcher);
 builder.registerAndUse(AllCoursesSearcher);
 builder.registerAndUse(AllCoursesPaginatedSearcher);
 builder.registerAndUse(CourseBySimilarNameFinder);
+
+// Invoice
+builder.register(InvoiceRepository).use(PostgresInvoiceRepository);
+builder.registerAndUse(PostgresInvoiceRepository);
+builder.registerAndUse(InvoiceCreator);
 
 // Export container
 export const container = builder.build();

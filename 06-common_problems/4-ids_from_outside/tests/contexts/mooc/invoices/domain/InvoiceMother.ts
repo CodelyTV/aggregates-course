@@ -3,6 +3,7 @@ import { faker } from "@faker-js/faker";
 import { Invoice } from "../../../../../src/contexts/mooc/invoices/domain/Invoice";
 import { InvoiceAmount } from "../../../../../src/contexts/mooc/invoices/domain/InvoiceAmount";
 import { InvoiceNumber } from "../../../../../src/contexts/mooc/invoices/domain/InvoiceNumber";
+import { InvoiceSerie } from "../../../../../src/contexts/mooc/invoices/domain/InvoiceSerie";
 import { InvoiceVatId } from "../../../../../src/contexts/mooc/invoices/domain/InvoiceVatId";
 
 import { InvoiceIdMother } from "./InvoiceIdMother";
@@ -27,7 +28,7 @@ export class InvoiceMother {
 
 		return new Invoice(
 			id,
-			serie,
+			new InvoiceSerie(serie),
 			new InvoiceNumber(number),
 			new InvoiceAmount(amount),
 			new InvoiceVatId(vatId),

@@ -5,12 +5,13 @@ import { AggregateRoot } from "../../../shared/domain/AggregateRoot";
 import { InvoiceAmount } from "./InvoiceAmount";
 import { InvoiceId } from "./InvoiceId";
 import { InvoiceNumber } from "./InvoiceNumber";
+import { InvoiceSerie } from "./InvoiceSerie";
 import { InvoiceVatId } from "./InvoiceVatId";
 
 export class Invoice extends AggregateRoot {
 	constructor(
 		readonly id: InvoiceId,
-		readonly serie: string,
+		readonly serie: InvoiceSerie,
 		readonly number: InvoiceNumber,
 		readonly amount: InvoiceAmount,
 		readonly vatId: InvoiceVatId,
@@ -21,7 +22,7 @@ export class Invoice extends AggregateRoot {
 	static fromPrimitives(primitives: Primitives<Invoice>): Invoice {
 		return new Invoice(
 			new InvoiceId(primitives.id),
-			primitives.serie,
+			new InvoiceSerie(primitives.serie),
 			new InvoiceNumber(primitives.number),
 			new InvoiceAmount(primitives.amount),
 			new InvoiceVatId(primitives.vatId),
@@ -47,7 +48,7 @@ export class Invoice extends AggregateRoot {
 	toPrimitives(): Primitives<Invoice> {
 		return {
 			id: this.id.value,
-			serie: this.serie,
+			serie: this.serie.value,
 			number: this.number.value,
 			amount: this.amount.value,
 			vatId: this.vatId.value,
